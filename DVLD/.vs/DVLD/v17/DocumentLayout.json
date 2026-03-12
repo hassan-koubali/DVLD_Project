@@ -1,12 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\bbbb\\DVLD\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\DVLD_Project\\DVLD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1772010-F28E-44B5-B40C-3EDFAB0351AD}|DVLD.csproj|c:\\users\\hp\\desktop\\dvld_project\\dvld\\global classes\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1772010-F28E-44B5-B40C-3EDFAB0351AD}|DVLD.csproj|solutionrelative:global classes\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1772010-F28E-44B5-B40C-3EDFAB0351AD}|DVLD.csproj|c:\\users\\hp\\desktop\\dvld_project\\dvld\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1772010-F28E-44B5-B40C-3EDFAB0351AD}|DVLD.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1772010-F28E-44B5-B40C-3EDFAB0351AD}|DVLD.csproj|c:\\users\\hp\\desktop\\dvld_project\\dvld\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1772010-F28E-44B5-B40C-3EDFAB0351AD}|DVLD.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsGlobal.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\DVLD_Project\\DVLD\\global classes\\clsGlobal.cs",
+              "RelativeDocumentMoniker": "global classes\\clsGlobal.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\DVLD_Project\\DVLD\\global classes\\clsGlobal.cs",
+              "RelativeToolTip": "global classes\\clsGlobal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T22:34:22.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\DVLD_Project\\DVLD\\Login\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\DVLD_Project\\DVLD\\Login\\frmLogin.cs",
+              "RelativeToolTip": "Login\\frmLogin.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T22:34:10.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\DVLD_Project\\DVLD\\Login\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\DVLD_Project\\DVLD\\Login\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Login\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T22:34:06.062Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
