@@ -29,7 +29,14 @@ Main Entities:
 - Application Types
 - License Classes
 - Licenses
+<<<<<<< HEAD
 - Tests
+=======
+- Locale Licenses Application
+- International Licenses Application
+- Tests
+- Tests Type
+>>>>>>> 5a9e698c35bfcd987a8d4d2101dc6b93fe4ad3ad
 - Test Appointments
 - Detained Licenses
 - Countries
