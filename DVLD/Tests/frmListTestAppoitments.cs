@@ -164,13 +164,5 @@ namespace DVLD.Tests
 
 
 
-        //private void rToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
-
-        //    frmTakeTest frm = new frmTakeTest(TestAppointmentID, _TestType);
-        //    frm.ShowDialog();
-        //    frmListTestAppointments_Load(null, null);
-        //}
     }
 }

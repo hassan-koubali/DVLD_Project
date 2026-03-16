@@ -34,3 +34,12 @@ C:\Users\hp\source\repos\bbbb\DVLD_Buisness\obj\Debug\DVLD_Buisness.csproj.CoreC
 C:\Users\hp\source\repos\bbbb\DVLD_Buisness\obj\Debug\DVLD_Bui.E5CEC4E3.Up2Date
 C:\Users\hp\source\repos\bbbb\DVLD_Buisness\obj\Debug\DVLD_Buisness.dll
 C:\Users\hp\source\repos\bbbb\DVLD_Buisness\obj\Debug\DVLD_Buisness.pdb
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\bin\Debug\DVLD_Buisness.dll
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\bin\Debug\DVLD_Buisness.pdb
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\bin\Debug\DVLD_DataAccess.dll
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\bin\Debug\DVLD_DataAccess.pdb
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\obj\Debug\DVLD_Bui.E5CEC4E3.Up2Date
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.dll
+C:\Users\hp\Desktop\DVLD_Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.pdb

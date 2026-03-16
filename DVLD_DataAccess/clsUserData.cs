@@ -126,7 +126,7 @@ namespace DVLD_DataAccess
             string query = "SELECT * FROM Users WHERE Username = @Username and Password=@Password;";
 
             SqlCommand command = new SqlCommand(query, connection);
-
+            Password = Hashing.ComputeHash((string)Password);
             command.Parameters.AddWithValue("@Username", UserName);
             command.Parameters.AddWithValue("@Password", Password);
 
@@ -185,7 +185,7 @@ namespace DVLD_DataAccess
                              SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
-
+            Password = Hashing.ComputeHash((string)Password);
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@UserName", UserName);
             command.Parameters.AddWithValue("@Password", Password);
@@ -233,7 +233,7 @@ namespace DVLD_DataAccess
                                 where UserID = @UserID";
 
             SqlCommand command = new SqlCommand(query, connection);
-
+            Password = Hashing.ComputeHash((string)Password);
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@UserName", UserName);
             command.Parameters.AddWithValue("@Password", Password);
@@ -483,7 +483,7 @@ namespace DVLD_DataAccess
 
             int rowsAffected = 0;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
+            NewPassword = Hashing.ComputeHash((string)NewPassword);
             string query = @"Update  Users  
                             set Password = @Password
                             where UserID = @UserID";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -36,7 +37,15 @@ namespace DVLD.Classes
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error creating folder: " + ex.Message);
+                    string sourceName = "DVLD_Project";
+
+
+                    if (!EventLog.SourceExists(sourceName))
+                    {
+                        EventLog.CreateEventSource(sourceName, "Application");
+                    }
+
+                    EventLog.WriteEntry(sourceName, $"An error occurred: {ex.Message}", EventLogEntryType.Error);
                     return false;
                 }
             }
@@ -75,7 +84,16 @@ namespace DVLD.Classes
             }
             catch (IOException iox)
             {
-                MessageBox.Show (iox.Message,"Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string sourceName = "DVLD_Project";
+
+
+                if (!EventLog.SourceExists(sourceName))
+                {
+                    EventLog.CreateEventSource(sourceName, "Application");
+                }
+
+                EventLog.WriteEntry(sourceName, $"An error occurred: {iox.Message}", EventLogEntryType.Error);
+                MessageBox.Show(iox.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

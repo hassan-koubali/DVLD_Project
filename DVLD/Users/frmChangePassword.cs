@@ -1,4 +1,5 @@
-﻿using DVLD.Users.Controles;
+﻿using DVLD.Classes;
+using DVLD.Users.Controles;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -72,8 +73,8 @@ namespace DVLD.Users
                 errorProvider1.SetError(txtCurrentPassword, null);
             }
             ;
-
-            if (_User.Password != txtCurrentPassword.Text.Trim())
+            string PasswordHashing = clsGlobal.ComputeHash((string)txtCurrentPassword.Text);
+            if (_User.Password != PasswordHashing)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtCurrentPassword, "Current password is wrong!");
