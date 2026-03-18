@@ -22,12 +22,14 @@ namespace DVLD.Classes
 
         public static bool RememberUsernameAndPassword(string Username, string Password)
         {
+            string KeyEncript = "1234567890123456";
             string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD_Project";
             string userName = "UserName";
             string UserNameValue = Username;
             string PasswordName = "Password";
-            string PasswordValue = Password;
+            //string PasswordValue = Password;
 
+            string PasswordEncripted = Encrypt(Password, KeyEncript);
 
 
             try
@@ -35,7 +37,7 @@ namespace DVLD.Classes
                 // Write the value to the Registry
                 Registry.SetValue(keyPath, userName, UserNameValue, RegistryValueKind.String);
                 //Registry.SetValue(keyPath, PasswordName, PasswordValue, RegistryValueKind.String);
-                Registry.SetValue(keyPath, PasswordName, PasswordValue, RegistryValueKind.String);
+                Registry.SetValue(keyPath, PasswordName, PasswordEncripted, RegistryValueKind.String);
 
                 return true;
 
@@ -62,6 +64,7 @@ namespace DVLD.Classes
             string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD_Project";
             string userName = "UserName";
             string password = "Password";
+            string KeyEncript = "1234567890123456";
 
 
             try
@@ -80,7 +83,7 @@ namespace DVLD.Classes
                 }
                 if (passwordValue != null)
                 {
-                    Password = passwordValue;
+                    Password = Decrypt(passwordValue, KeyEncript);
                 }
                 else
                 {
@@ -122,6 +125,60 @@ namespace DVLD.Classes
                 return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
             }
         }
+
+        public static string Encrypt(string plainText, string key)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                // Set the key and IV for AES encryption
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = new byte[aesAlg.BlockSize / 8];
+
+
+                // Create an encryptor
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+
+                // Encrypt the data
+                using (var msEncrypt = new System.IO.MemoryStream())
+                {
+                    using (var csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    using (var swEncrypt = new System.IO.StreamWriter(csEncrypt))
+                    {
+                        swEncrypt.Write(plainText);
+                    }
+
+
+                    // Return the encrypted data as a Base64-encoded string
+                    return Convert.ToBase64String(msEncrypt.ToArray());
+                }
+            }
+        }
+
+        static string Decrypt(string cipherText, string key)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                // Set the key and IV for AES decryption
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = new byte[aesAlg.BlockSize / 8];
+
+
+                // Create a decryptor
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+
+                // Decrypt the data
+                using (var msDecrypt = new System.IO.MemoryStream(Convert.FromBase64String(cipherText)))
+                using (var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                using (var srDecrypt = new System.IO.StreamReader(csDecrypt))
+                {
+                    // Read the decrypted data from the StreamReader
+                    return srDecrypt.ReadToEnd();
+                }
+            }
+        }
+
 
     }
 }
