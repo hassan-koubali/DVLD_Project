@@ -72,6 +72,7 @@
             this.btnFindPerson.Size = new System.Drawing.Size(37, 37);
             this.btnFindPerson.TabIndex = 9;
             this.btnFindPerson.UseVisualStyleBackColor = true;
+            this.btnFindPerson.Click += new System.EventHandler(this.btnFindPerson_Click_1);
             // 
             // txtFilterValue
             // 

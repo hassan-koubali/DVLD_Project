@@ -192,6 +192,7 @@ namespace DVLD.People
 
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtFilterValue.Text = "";
             string Value = txtFilterValue.Text;
             CheckIfComboBoxHasSpace(Value);
         }

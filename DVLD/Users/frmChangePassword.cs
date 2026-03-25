@@ -73,8 +73,9 @@ namespace DVLD.Users
                 errorProvider1.SetError(txtCurrentPassword, null);
             }
             ;
-            string PasswordHashing = clsGlobal.ComputeHash((string)txtCurrentPassword.Text);
-            if (_User.Password != PasswordHashing)
+            string txtCurrentPasswordHashing = clsGlobal.ComputeHash((string)txtCurrentPassword.Text);
+            
+            if (_User.Password != txtCurrentPasswordHashing)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtCurrentPassword, "Current password is wrong!");
@@ -133,7 +134,10 @@ namespace DVLD.Users
                 return;
             }
 
-            _User.Password = txtNewPassword.Text;
+            string txtNewPasswordHashing = clsGlobal.ComputeHash((string)txtNewPassword.Text);
+
+
+            _User.Password = txtNewPasswordHashing;
 
             if (_User.Save())
             {

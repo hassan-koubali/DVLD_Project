@@ -109,15 +109,7 @@ namespace DVLD.People.Controls
         }
 
 
-        private void btnFindPerson_Click(object sender, EventArgs e)
-        {
-            if (!this.ValidateChildren())
-            {
-                MessageBox.Show("Some Filds are Not Valid!", "Please Fill All Filds", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            _FindNow();
-        }
+
 
         private void ctrlPersonCardWithFilter_Load(object sender, EventArgs e)
         {
@@ -171,6 +163,19 @@ namespace DVLD.People.Controls
             }
             
 
+        }
+
+        private void btnFindPerson_Click_1(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                //Here we dont continue becuase the form is not valid
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+            _FindNow();
         }
     }
 }

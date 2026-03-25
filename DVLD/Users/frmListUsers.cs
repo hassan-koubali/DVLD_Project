@@ -238,7 +238,7 @@ namespace DVLD.Users
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChangePassword frmChangePassword = new frmChangePassword((int)dgvUsers.CurrentRow.Cells[1].Value);
+            frmChangePassword frmChangePassword = new frmChangePassword((int)dgvUsers.CurrentRow.Cells[0].Value);
             frmChangePassword.ShowDialog();
             _FillUsersInDataGridView();
         }
